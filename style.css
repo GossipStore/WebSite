@@ -1,74 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+:root {
+    --color-green: #e5d5be;
+    --color-blue1: #a9c8d6;
+    --color-blue2: #bbd0f5;
+    --color-purple: #c9bfef;
+    --color-pink: #e6bfde;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #0A0F13;
     height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
-.container {
-    text-align: center;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 500px;
+.menu {
     width: 100%;
-}
-
-.icon {
-    width: 100px;
-    height: auto;
-}
-
-h1 {
-    color: #333;
-    margin: 20px 0;
-}
-
-p {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.countdown {
-    margin: 20px 0;
-}
-
-#timer {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
-
-#timer span {
-    display: inline-block;
-    min-width: 40px;
-    text-align: center;
-    background-color: #f3f3f3;
-    border-radius: 4px;
-    padding: 10px;
-    margin: 0 5px;
-}
-
-.contact-link {
+    padding: 20px 10px;
+    background-color: #10181e;
+    box-shadow: 0 0 20px -12px rgba(0, 0, 0, 0.56);
     display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+}
+
+.menu a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #ffffffe1;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: .5s ease-in-out;
+    border: 2px dashed #d4e5be00;
+}
+
+.menu a:hover {
+    border: 2px dashed var(--color);
+    box-shadow: 0 0 15px var(--color);
+}
+
+.menu a.active {
+    border: 2px dashed var(--color);
+    box-shadow: 0 0 15px var(--color);
+}
+
+.webserver {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 5rem;
+    flex-direction: row-reverse;
+}
+
+.webserver .text h1 {
+    color: #ffffffe1;
+
+}
+
+.webserver .text span, .webserver .text strong {
+    color: #9dc0fb;
+    text-shadow: 0 0 10px #7ba2e6;
+}
+
+.webserver .text p {
+    color: #ffffffe1;
+    text-align: initial;
+}
+
+.webserver img {
+    width: 100%;
+    min-width: 600px;
+}
+
+.reverse {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-webserver {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.webserver-info {
+    width: 350px;
+    display: flex;
+    padding: 15px;
+    background-color: #10181e;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #0000007e;
+    color: #ffffffe1;
+    gap: 1rem;
+    align-items: center;
+}
+
+.webserver-info span.img {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A0F13;
+    border-radius: 50%;
+}
+
+.webserver-info .name-status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.webserver-info .name-status span.name {
+    font-weight: 600;
+    display: flex;
+    gap: .3rem;
     align-items: center;
     justify-content: center;
-    color: #007bff;
-    text-decoration: none;
-    margin-top: 20px;
 }
 
-.contact-link img {
-    width: 24px;
-    height: auto;
-    margin-right: 8px;
+span.name i {
+    font-size: .8rem;
+    margin-top: 3px;
 }
 
-.contact-link:hover {
-    text-decoration: underline;
+.webserver-info .name-status span.status {
+    font-size: .7rem;
+    color: #f2ffe1;
+}
+
+.infos-server .cards{ /* Certifique-se de que o nome da classe está correto aqui */
+    display: grid;
+    grid-template-columns: 220px 220px 320px;
+    margin: 20px; 
+    gap: 4rem;
+}
+
+.infos-server .card { /* Certifique-se de que o nome da classe está correto aqui */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #10181e;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px #0000007e;
+    transition: .5s ease-in-out;
+}
+
+.infos-server .card:hover {
+    box-shadow: 0 0 25px #0000007e;
+    transform: scale(1.1);
+}
+
+.info {
+    background-color: #10181e;
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o texto centralizado */
+    text-align: center; /* Centraliza o texto */
+    gap: 1px; /* Espaço entre o <p> e o <h3> */
+}
+
+.info p {
+    margin: 0;
+    font-size: .8rem;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card i {
+    margin-left: var(--left);
+    font-size: 4rem;
+    margin-top: -20px;
+    color: var(--color-icon);
+}
+
+.info-bot {
+    display: flex; /* Alinha as divs lado a lado */
+    flex-direction: column;
+    gap: 4rem; /* Espaço entre as divs */
+}
+
+.webhooks h1 {
+    margin: 0;
+    color: #ffffffe1;
+}
+
+.webhooks {
+    display: grid;
+    grid-template-columns: 1fr; /* Faz com que os itens fiquem um embaixo do outro */
+    gap: 1rem; /* Adiciona um espaço entre os itens */
+    margin: 20px;
+}
+
+.webhook {
+    max-width: 100%; /* Define uma largura máxima */
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #10181e;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    box-shadow: 0 0 15px #0000007e;
+}
+
+.webhook span.img {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A0F13;
+    border-radius: 50%;
+    color: #ffffffe1;
+}
+
+.webhook span.name {
+    color: #ffffffe1;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+.pulse {
+    width: 13px;
+    height: 13px;
+    background-color: #a6df5c;
+    border-radius: 50%;
+    position: relative;
+}
+
+.pulse span {
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    border-radius: 50%;
+    animation: pulsar 4s infinite;
+    animation-delay: calc(1s * var(--deley));
+    opacity: .8;
+}
+
+.pulse.off{
+    background-color: #df5c5c;
+}
+
+@keyframes pulsar {
+    to {
+        transform: scale(2); /* Corrige o erro, usa transform para escalar */
+        opacity: 0;
+    }
+}
+
+.comands h1 {
+    margin: 0;
+    color: #ffffffe1;
+}
+
+.comands {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Adiciona um espaço entre os itens */
+    margin: 20px;
+}
+
+.command {
+    max-width: 100%; /* Define uma largura máxima para o item */
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #10181e;
+    display: grid; /* Usa grid para alinhar os itens em colunas */
+    grid-template-columns: 1fr 9fr 3fr 1fr; /* Define colunas proporcionais para name, description, perm, status */
+    gap: 1rem; /* Adiciona espaço entre as colunas */
+    align-items: center; /* Alinha os itens verticalmente */
+    box-shadow: 0 0 15px #0000007e;
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+}
+
+/* Definições para os spans */
+.command span.name,
+.command span.perm{
+    background-color: #0A0F13;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ffffffe1;
+}
+
+.command span.description {
+    color: #ffffffe1;
+}
+
+/* Ajusta o alinhamento das colunas */
+.command span.name {
+    grid-column: 1; /* Alinha o nome na primeira coluna */
+}
+
+.command span.description {
+    grid-column: 2; /* Alinha a descrição na segunda coluna */
+}
+
+.command span.perm {
+    grid-column: 3; /* Alinha a permissão na terceira coluna */
 }

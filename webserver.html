@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gossip Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div class="menu">
+        <li>
+            <a href="./" style="--color: #d4e5be;">
+                <span class="icon"><i class="fa-solid fa-house"></i></span>
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="webserver" style="--color: #a9c8d6;" class="active">
+                <span class="icon"><i class="fa-solid fa-server"></i></span>
+                <span class="text">Web Server</span>
+            </a>
+        </li>
+        <li>
+            <a href="gossipbot" style="--color: #c9bfef;">
+                <span class="icon"><i class="fa-solid fa-robot"></i></span>
+                <span class="text">Bot Gossip</span>
+            </a>
+        </li>
+    </div>
+
+    
+    <div class="main-webserver">
+        <div class="webserver-info">
+            <span class="img"><i class="fa-solid fa-cloud"></i></span>
+            <div class="name-status">
+                <span class="name">Cloud Gossip <i class="fa-solid fa-circle-check" style="color: #9ec6d8;"></i></span>
+                <span class="status">Connected</span>
+            </div>
+        </div>
+
+        <div class="infos-server">
+            <div class="cards">
+                <div class="card">
+                    <div class="info">
+                        <p>Solicitações</p>
+                        <h3>3500</h3>
+                    </div>
+                    <i class="fa-solid fa-satellite-dish" style="--color-icon: #7ba2e6; --left: 130px;"></i>
+                </div>
+                <div class="card">
+                    <div class="info">
+                        <p>Server</p>
+                        <h3>Vortex</h3>
+                    </div>
+                    <i class="fa-solid fa-fire-flame-curved" style="--color-icon: #ffb854; --left: 150px;"></i>
+                </div>
+                <div class="card">
+                    <div class="info">
+                        <p>Location</p>
+                        <h3>South America</h3>
+                    </div>
+                    <i class="fa-solid fa-earth-americas" style="--color-icon: #33c23c; --left: 230px;"></i>
+                </div>
+                <div class="card">
+                    <div class="info">
+                        <p>Ping Server</p>
+                        <h3 id="ping"></h3>
+                    </div>
+                    <i class="fa-solid fa-spinner" style="--color-icon: #e4e4e4; --left: 130px;"></i>
+                </div>
+                <div class="card">
+                    <div class="info">
+                        <p>Security</p>
+                        <h3>Excellent</h3>
+                    </div>
+                    <i class="fa-solid fa-shield-halved" style="--color-icon: #7ba2e6; --left: 140px;"></i>
+                </div>
+                <div class="card">
+                    <div class="info">
+                        <p>Last Update</p>
+                        <h3>August 23, 2024</h3>
+                    </div>
+                    <i class="fa-solid fa-shekel-sign" style="--color-icon: #e6907b; --left: 240px;"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <div class="container">
+        <div class="content">
+            <h1>Site em Construção</h1>
+            <p>Estamos trabalhando para trazer algo incrível para você. Volte em breve!</p>
+            <div class="countdown">
+                <h2>Contagem Regressiva</h2>
+                <div id="timer">
+                    <span id="days">00</span>:<span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <script>
+        function updatePing() {
+            const pingElement = document.getElementById('ping');
+            const pingValues = ['30 ms', '32 ms', '28 ms', '29 ms', '31 ms']; // Valores de exemplo para simulação
+
+            // Função para gerar um valor de ping aleatório
+            function getRandomPing() {
+                const randomIndex = Math.floor(Math.random() * pingValues.length);
+                return pingValues[randomIndex];
+            }
+
+            // Atualiza o elemento com um novo valor de ping a cada 2 segundos
+            setInterval(() => {
+                pingElement.textContent = `${getRandomPing()}`;
+            }, 2000); // 2000 milissegundos = 2 segundos
+        }
+
+        // Chama a função para iniciar a atualização
+        updatePing();
+    </script>
+</body>
+</html>

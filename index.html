@@ -5,11 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gossip Store</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script defer src="script.js"></script>
-    <link rel="icon" href="https://example.com/favicon.ico"> <!-- Substitua com seu ícone -->
 </head>
 <body>
-    <div class="container">
+
+    <div class="menu">
+        <li>
+            <a href="./" style="--color: #d4e5be;" class="active">
+                <span class="icon"><i class="fa-solid fa-house"></i></span>
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="webserver" style="--color: #a9c8d6;">
+                <span class="icon"><i class="fa-solid fa-server"></i></span>
+                <span class="text">Web Server</span>
+            </a>
+        </li>
+        <li>
+            <a href="gossipbot" style="--color: #c9bfef;">
+                <span class="icon"><i class="fa-solid fa-robot"></i></span>
+                <span class="text">Bot Gossip</span>
+            </a>
+        </li>
+    </div>
+
+    <div class="webserver">
+        <div class="img">
+            <img src="./img/server.svg" alt="">
+        </div>
+
+        <div class="text">
+            <h1>WEB SERVER<span>.</span></h1>
+            <p>Um <strong>Web Server</strong> é um software que entrega páginas web aos usuários. Quando você acessa um site, o navegador faz uma solicitação ao servidor, que responde com a página desejada. Além de fornecer conteúdo, o Web Server gerencia requisições HTTP, <strong>garante a segurança</strong> e pode suportar múltiplos usuários simultaneamente. Exemplos populares incluem Apache, Nginx e IIS. <strong>O Google</strong> utiliza alguns dos servidores web mais avançados do mundo.</p>
+        </div>
+    </div>
+
+    <div class="webserver reverse">
+        <div class="img">
+            <img src="./img/botgossip.svg" alt="">
+        </div>
+
+        <div class="text">
+            <h1>BOT GOSSIP<span>.</span></h1>
+            <p>O site da <strong>Gossip Store</strong> oferece integração completa com o bot, permitindo que os usuários acessem comandos exclusivos diretamente através do site. Isso proporciona uma experiência interativa e personalizada, onde os visitantes podem explorar funcionalidades adicionais e obter informações exclusivas disponíveis apenas via bot, tornando a interação com a <strong>Gossip Store</strong> ainda mais envolvente e dinâmica<strong>.</strong></p>
+        </div>
+    </div>
+
+    <!-- <div class="container">
         <div class="content">
             <h1>Site em Construção</h1>
             <p>Estamos trabalhando para trazer algo incrível para você. Volte em breve!</p>
@@ -20,6 +64,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>

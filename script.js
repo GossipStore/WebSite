@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Define a data e hora de contagem regressiva (2 dias e 12 horas a partir do momento atual)
     const now = new Date();
-    const countdownDate = new Date(now.getTime() + (4 * 24 * 60 * 60 * 1000) + (12 * 60 * 60 * 1000));
+    const countdownDate = new Date(now.getTime() + (2 * 24 * 60 * 60 * 1000) + (12 * 60 * 60 * 1000));
 
     function updateCountdown() {
         const now = new Date().getTime();
