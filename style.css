@@ -318,3 +318,52 @@ span.name i {
 .command span.perm {
     grid-column: 3; /* Alinha a permissão na terceira coluna */
 }
+
+
+@media only screen and (max-width: 950px) {
+    .infos-server .cards {
+        display: grid;
+        grid-template-columns: 100%;
+        margin: 20px; 
+        gap: 1rem;
+    }
+
+    .card i{
+        margin-top: 0;
+        text-align: right;
+    }
+
+    .webserver {
+        flex-direction: column;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+
+    .webserver img {
+        min-width: none;
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .menu a span.text{
+        display: none;
+    }
+
+    .webserver-info {
+        width: 80%;
+    }
+
+    .command {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .webserver img {
+        display: none;
+    }
+
+}
